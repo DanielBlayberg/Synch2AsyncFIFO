@@ -1,7 +1,7 @@
 # Synch2AsyncFIFO
 ### Synch2AsyncFIFO  
 
-This repository highlights the differences between synchronous and asynchronous FIFO designs, providing implementations that focus on their logic and functionality.  
+This project highlights the differences between synchronous and asynchronous FIFO designs , providing implementations that focus on their logic and functionality.  
 
 Key aspects covered in this project:  
 - **Synchronous FIFO:** Operates under a single clock domain, making it simple and efficient for systems where data transfer occurs at the same clock rate.  
@@ -12,4 +12,4 @@ Additional insights include:
 - Explanation of control signals like "write enable," "read enable," and pointers for both designs.  
 - Use cases and advantages of each design in hardware systems.  
 
-This repository is a great resource for anyone looking to understand and implement FIFO structures in Verilog or similar hardware description languages.
+This project is a great resource for anyone looking to understand and implement FIFO structures in Verilog or similar hardware description languages.
