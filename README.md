@@ -13,3 +13,5 @@ Additional insights include:
 - Use cases and advantages of each design in hardware systems.  
 
 This project is a great resource for anyone looking to understand and implement FIFO structures in Verilog or similar hardware description languages.
+
+### Introduction
