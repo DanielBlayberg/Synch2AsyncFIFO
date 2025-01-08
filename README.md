@@ -14,7 +14,7 @@ Additional insights include:
 
 This project is a great resource for anyone looking to understand and implement FIFO structures in Verilog or similar hardware description languages.
 
-### cotertet
+### Applications of Async FIFOs
 
 Asynchronous FIFOs are commonly used in scenarios where data must be transferred between two parts of a system operating at different clock frequencies. They play a critical role in ensuring reliable data transfer across asynchronous clock domains. Some typical use cases include:
 
