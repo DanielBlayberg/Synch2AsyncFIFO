@@ -14,7 +14,11 @@ Additional insights include:
 
 This project is a great resource for anyone looking to understand and implement FIFO structures in Verilog or similar hardware description languages.
 
+
+
 ![ Queue Execution Steps](images/Fifo_queue.png)
+
+
 
 
 ### Applications of Async FIFOs
