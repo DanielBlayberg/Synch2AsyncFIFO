@@ -14,6 +14,10 @@ Additional insights include:
 
 This project is a great resource for anyone looking to understand and implement FIFO structures in Verilog or similar hardware description languages.
 
+<div style="margin: 20px 0;">
+    <img src="images/Fifo_queue.png" alt="FIFO Queue Operations" width="500">
+</div>
+
 ![FIFO Queue Operations](images/Fifo_queue.png)
 
 *Figure1 : Illustration of Enqueue and Dequeue operations in a FIFO queue.*
