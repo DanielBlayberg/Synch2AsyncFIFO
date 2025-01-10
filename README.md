@@ -16,7 +16,7 @@ This project is a great resource for anyone looking to understand and implement 
 
 ![ Queue Execution Steps](images/Fifo_queue.png)
 
-                                    *Illustration of Enqueue and Dequeue operations in a FIFO queue.*
+                             Illustration of Enqueue and Dequeue operations in a FIFO queue
 
 ### Applications of Async FIFOs
 
