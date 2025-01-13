@@ -70,7 +70,8 @@ Gray code counters are commonly utilized in FIFO designs due to their unique cha
 
 4. **Memory**  
     Represents the actual FIFO memory (dual-port RAM) where data is stored. It supports simultaneous read and write operations in separate clock domains.
-   [Memory Module](https://github.com/your-username/your-repo-name/blob/main/sources_1/new/Memory.v)
+
+    [Memory Module](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/Memory.v)
 
 
 6. **read_pointer_manager**  
