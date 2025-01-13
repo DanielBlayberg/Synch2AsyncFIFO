@@ -19,8 +19,6 @@ This project is a great resource for anyone looking to understand and implement 
     <p><i>Figure: Illustration of Enqueue and Dequeue operations in a FIFO queue.</i></p>
 </div>
 
-*Figure1 : Illustration of Enqueue and Dequeue operations in a FIFO queue.*
-
 ### Applications of Async FIFOs
 
 Asynchronous FIFOs are commonly used in scenarios where data must be transferred between two parts of a system operating at different clock frequencies. They play a critical role in ensuring reliable data transfer across asynchronous clock domains. Some typical use cases include:
