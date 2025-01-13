@@ -58,8 +58,8 @@ Gray code counters are commonly utilized in FIFO designs due to their unique cha
 
 ### Module Descriptions
 
-![Architecture Diagram](images/FIFO_MOUDLE.jpeg)
- <p><i>Figure_2 : Overview of the functional components in an asynchronous FIFO
+![RTL_FULL_CHIP](images/images/RTL_FULL_CHIP.jpeg)
+ <p><i>Figure_2 :showcasing the top-level connections between all modules within the design
 .</i></p>
 
 1. **async_fifo_system**  
