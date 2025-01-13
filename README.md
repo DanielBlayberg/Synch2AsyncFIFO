@@ -56,41 +56,28 @@ When the write pointer surpasses the final address in the FIFO memory, it increm
 **Gray Code Counter:**
 Gray code counters are commonly utilized in FIFO designs due to their unique characteristic: only one bit changes at a time during each clock transition. This property minimizes synchronization issues that arise when multiple signals change simultaneously on the same clock edge, ensuring reliable operation in asynchronous systems.
 
-### Signals Defination
-Following is the list of signals used in the design with their defination:
+### Module Descriptions
 
-wclk: Write clock signal.
+1. **async_fifo_system**  
+    The top-level module that integrates all the components of the asynchronous FIFO. It coordinates the read and write operations, synchronizers, and memory to ensure data transfer between independent clock 
+    domains.
 
-rclk: Read clock signal.
+2. **bin2gray**  
+    Converts binary values to Gray code. This is crucial for minimizing synchronization errors when transferring pointer values between clock domains, as Gray code changes only one bit at a time.
 
-wdata: Write data bits.
+3. **gray2bin**  
+    Converts Gray code values back to binary. This module ensures that the read and write pointers, transferred using Gray code, are converted to binary for correct addressing.
 
-rdata: Read data bits.
+4. **Memory**  
+    Represents the actual FIFO memory (dual-port RAM) where data is stored. It supports simultaneous read and write operations in separate clock domains.
 
-wclk_en: Write clock enable, this signal controls the write operation to the FIFO memory. Data must not be written if the FIFO memory is full (wfull = 1).
+5. **read_pointer_manager**  
+    Manages the read pointer and ensures proper synchronization of the read address. It handles pointer wrapping and communicates with the write clock domain to check the FIFO's empty status.
 
-wptr: Write pointer (Gray).
+6. **synchronizer**  
+    Synchronizes signals between the independent clock domains. It ensures that read and write pointers are safely transferred across clock domains without metastability issues.
 
-rptr: Read pointer (Gray).
+7. **write_pointer_manager**  
+    Manages the write pointer and its synchronization. It handles pointer wrapping and communicates with the read clock domain to monitor the FIFO's full status.
 
-winc: Write pointer increment. Controls the increment of the write pointer (wptr).
-
-rinc: Read pointer increment. Controls the increment of the read pointer (rptr).
-
-waddr: Binary write pointer address. Loaction (address) of the FIFO memory to which data (wdata) to be written.
-
-raddr: Binary read pointer address. Loaction (address) of the FIFO memory from where data (rdata) to be read.
-
-wfull: FIFO full flag. Goes high if the FIFO memory is full.
-
-rempty: FIFO empty flag. Goes high if the FIFO memory is empty
-.
-wrst_n: Active low asynchronous reset for the write pointer handler.
-
-rrst_n: Active low asynchronous reset for the read pointer handler.
-
-w_rptr: Read pointer signal synchronized to the wclk domain via 2 flip-flop synchronized.
-
-r_wptr: Write pointer signal synchronized to the rclk domain via 2 flip-flop synchronized.
-
-
+These modules together form the asynchronous FIFO system, ensuring reliable data transfer across clock domains. Let me know if you'd like a more detailed explanation of any specific module!
