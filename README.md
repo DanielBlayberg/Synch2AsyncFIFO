@@ -56,4 +56,25 @@ When the write pointer surpasses the final address in the FIFO memory, it increm
 **Gray Code Counter:**
 Gray code counters are commonly utilized in FIFO designs due to their unique characteristic: only one bit changes at a time during each clock transition. This property minimizes synchronization issues that arise when multiple signals change simultaneously on the same clock edge, ensuring reliable operation in asynchronous systems.
 
+### Signals Defination
+Following is the list of signals used in the design with their defination:-
+
+wclk: Write clock signal.
+rclk: Read clock signal.
+wdata: Write data bits.
+rdata: Read data bits.
+wclk_en: Write clock enable, this signal controls the write operation to the FIFO memory. Data must not be written if the FIFO memory is full (wfull = 1).
+wptr: Write pointer (Gray).
+rptr: Read pointer (Gray).
+winc: Write pointer increment. Controls the increment of the write pointer (wptr).
+rinc: Read pointer increment. Controls the increment of the read pointer (rptr).
+waddr: Binary write pointer address. Loaction (address) of the FIFO memory to which data (wdata) to be written.
+raddr: Binary read pointer address. Loaction (address) of the FIFO memory from where data (rdata) to be read.
+wfull: FIFO full flag. Goes high if the FIFO memory is full.
+rempty: FIFO empty flag. Goes high if the FIFO memory is empty.
+wrst_n: Active low asynchronous reset for the write pointer handler.
+rrst_n: Active low asynchronous reset for the read pointer handler.
+w_rptr: Read pointer signal synchronized to the wclk domain via 2 flip-flop synchronized.
+r_wptr: Write pointer signal synchronized to the rclk domain via 2 flip-flop synchronized.
+
 
