@@ -16,7 +16,7 @@ This project is a great resource for anyone looking to understand and implement 
 
 <div style="text-align: center; margin: 30px 0;">
     <img src="images/Fifo_queue.png" alt="FIFO Queue Operations" width="500">
-    <p><i>Figure 1: Illustration of Enqueue and Dequeue operations in a FIFO.</i></p>
+    <p><i>Figure_1 : Illustration of Enqueue and Dequeue operations in a FIFO.</i></p>
 </div>
 
 ### Applications of Async FIFOs
