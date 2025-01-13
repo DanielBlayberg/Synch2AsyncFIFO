@@ -95,4 +95,4 @@ Gray code counters are commonly utilized in FIFO designs due to their unique cha
 
 [Write Pointer Manager](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/write_pointer_manager.v)  
 
-These modules together form the asynchronous FIFO system, ensuring reliable data transfer across clock domains. Let me know if you'd like a more detailed explanation of any specific module!
+These modules together form the asynchronous FIFO system, ensuring reliable data transfer across clock domains. 
