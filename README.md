@@ -47,6 +47,7 @@ The FIFO is empty when the read and write pointers are equal. This situation occ
 
 **Full Condition:**
 The FIFO is full when the write pointer wraps around and aligns with the read pointer. This indicates that the write pointer has written past the last address in the FIFO and started over at the beginning of the buffer.
+
 To distinguish between the full and empty conditions when the pointers are equal, an extra bit is added to each pointer. This extra bit helps in identifying whether the pointers have wrapped around:
 
 **Wrapping Around Condition**: When the write pointer increments past the final FIFO address, it will increment the unused Most Significant Bit (MSB) while setting the rest of the bits back to zero. The same is done with the read pointer. If the MSBs of the two pointers are different, it means that the write pointer has wrapped one more time than the read pointer. If the MSBs of the two pointers are the same, it means that both pointers have wrapped the same number of times.
