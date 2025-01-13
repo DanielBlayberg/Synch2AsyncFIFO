@@ -50,10 +50,10 @@ The FIFO is full when the write pointer wraps around and aligns with the read po
 
 To distinguish between the full and empty conditions when the pointers are equal, an extra bit is added to each pointer. This extra bit helps in identifying whether the pointers have wrapped around:
 
-**Wrapping Around Condition**: When the write pointer increments past the final FIFO address, it will increment the unused Most Significant Bit (MSB) while setting the rest of the bits back to zero. The same is done with the read pointer. If the MSBs of the two pointers are different, it means that the write pointer has wrapped one more time than the read pointer. If the MSBs of the two pointers are the same, it means that both pointers have wrapped the same number of times.
-This design technique helps in accurately determining the full and empty conditions of the FIFO.
+**Wrapping Around Condition:**
+When the write pointer surpasses the final address in the FIFO memory, it increments the Most Significant Bit (MSB) while resetting the other bits to zero. A similar behavior applies to the read pointer. If the MSBs of the write and read pointers differ, it indicates that the write pointer has completed one more wrap-around than the read pointer. If their MSBs are identical, both pointers have wrapped around the same number of times. This method ensures precise differentiation between full and empty FIFO states.
 
-**Gray code counter**
-Gray code counters are used in FIFO design because they only allow one bit to change for each clock transition. This characteristic eliminates the problem associated with trying to synchronize multiple changing signals on the same clock edge, which is crucial for reliable operation in asynchronous systems.
+**Gray Code Counter:**
+Gray code counters are commonly utilized in FIFO designs due to their unique characteristic: only one bit changes at a time during each clock transition. This property minimizes synchronization issues that arise when multiple signals change simultaneously on the same clock edge, ensuring reliable operation in asynchronous systems.
 
 
