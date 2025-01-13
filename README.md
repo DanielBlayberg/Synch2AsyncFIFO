@@ -58,6 +58,10 @@ Gray code counters are commonly utilized in FIFO designs due to their unique cha
 
 ### Module Descriptions
 
+![Architecture Diagram](images/FIFO_MOUDLE.jpeg)
+ <p><i>Figure_2 : Overview of the functional components in an asynchronous FIFO
+.</i></p>
+
 1. **async_fifo_system**  
     The top-level module that integrates all the components of the asynchronous FIFO. It coordinates the read and write operations, synchronizers, and memory to ensure data transfer between independent clock 
     domains.
