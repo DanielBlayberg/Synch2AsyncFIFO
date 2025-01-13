@@ -70,14 +70,16 @@ Gray code counters are commonly utilized in FIFO designs due to their unique cha
 
 4. **Memory**  
     Represents the actual FIFO memory (dual-port RAM) where data is stored. It supports simultaneous read and write operations in separate clock domains.
+   [Memory Module](https://github.com/your-username/your-repo-name/blob/main/sources_1/new/Memory.v)
 
-5. **read_pointer_manager**  
+
+6. **read_pointer_manager**  
     Manages the read pointer and ensures proper synchronization of the read address. It handles pointer wrapping and communicates with the write clock domain to check the FIFO's empty status.
 
-6. **synchronizer**  
+7. **synchronizer**  
     Synchronizes signals between the independent clock domains. It ensures that read and write pointers are safely transferred across clock domains without metastability issues.
 
-7. **write_pointer_manager**  
+8. **write_pointer_manager**  
     Manages the write pointer and its synchronization. It handles pointer wrapping and communicates with the read clock domain to monitor the FIFO's full status.
 
 These modules together form the asynchronous FIFO system, ensuring reliable data transfer across clock domains. Let me know if you'd like a more detailed explanation of any specific module!
