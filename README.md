@@ -33,6 +33,9 @@ Asynchronous FIFOs are commonly used in scenarios where data must be transferred
 The block diagram of async. FIFO that is implemented in this repo is given below
 
 ![Architecture Diagram](images/FIFO_MOUDLE.jpeg)
+ <p><i>Figure_2 : Overview of the functional components in an asynchronous FIFO
+.</i></p>
+Overview of the functional components in an asynchronous FIFO
 
 Read and Write Operations
 Operations
