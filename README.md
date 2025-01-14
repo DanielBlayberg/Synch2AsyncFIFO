@@ -71,38 +71,44 @@ Gray code counters are commonly utilized in FIFO designs due to their unique cha
 2. **bin2gray**  
     Converts binary values to Gray code. This is crucial for minimizing synchronization errors when transferring pointer values between clock domains, as Gray code changes only one bit at a time.
 
-   [Binary to Gray Converter.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/bin2gray.v)  
+   [Binary to Gray Converter.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/bin2gray.v)
+   
    [B2G.jpeg](https://raw.githubusercontent.com/DanielBlayberg/Synch2AsyncFIFO/main/images/images/b2g.jpeg)
 
-3. **gray2bin**  
+4. **gray2bin**  
     Converts Gray code values back to binary. This module ensures that the read and write pointers, transferred using Gray code, are converted to binary for correct addressing.
 
-   [Gray to Binary Converter.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/gray2bin.v)  
+   [Gray to Binary Converter.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/gray2bin.v)
+     
    [G2B.jpeg](https://raw.githubusercontent.com/DanielBlayberg/Synch2AsyncFIFO/main/images/images/g2b.jpeg)
 
-4. **Memory**  
+6. **Memory**  
     Represents the actual FIFO memory (dual-port RAM) where data is stored. It supports simultaneous read and write operations in separate clock domains.
 
     [Memory Module.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/Memory.v)
+   
     [Memory.jpeg](https://raw.githubusercontent.com/DanielBlayberg/Synch2AsyncFIFO/main/images/images/Memory.jpeg)
 
 
-6. **read_pointer_manager**  
+8. **read_pointer_manager**  
     Manages the read pointer and ensures proper synchronization of the read address. It handles pointer wrapping and communicates with the write clock domain to check the FIFO's empty status.
 
     [Read Pointer Manager.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/read_pointer_manager.v)
+   
     [Read Control.jpeg](https://raw.githubusercontent.com/DanielBlayberg/Synch2AsyncFIFO/main/images/images/Read_Control.jpeg)
 
-7. **synchronizer**  
+10. **synchronizer**  
     Synchronizes signals between the independent clock domains. It ensures that read and write pointers are safely transferred across clock domains without metastability issues.
 
-    [Synchronizer.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/syncronaizer.v) 
+    [Synchronizer.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/syncronaizer.v)
+    
     [Sync.jpeg](https://raw.githubusercontent.com/DanielBlayberg/Synch2AsyncFIFO/main/images/images/Sync.jpeg) 
 
-8. **write_pointer_manager**  
+12. **write_pointer_manager**  
     Manages the write pointer and its synchronization. It handles pointer wrapping and communicates with the read clock domain to monitor the FIFO's full status.
 
-    [Write Pointer Manager.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/write_pointer_manager.v)  
+    [Write Pointer Manager.V](https://github.com/DanielBlayberg/Synch2AsyncFIFO/blob/main/sources_1/new/write_pointer_manager.v)
+     
     [Write Control.jpeg](https://raw.githubusercontent.com/DanielBlayberg/Synch2AsyncFIFO/main/images/images/Write_Control.jpeg)
 
 These modules together form the asynchronous FIFO system, ensuring reliable data transfer across clock domains. 
